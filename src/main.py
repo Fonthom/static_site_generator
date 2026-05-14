@@ -1,15 +1,15 @@
 from copy_static import copy_static
-from generate_page import generate_page
+from generate_pages import generate_pages_recursive
 
 
 def main():
     print("🚀 Starting static site generation...\n")
     
     copy_static()
-    generate_page(
-        from_path="../content/index.md",
+    generate_pages_recursive(
+        content_dir_path="../content",
         template_path="../template.html",
-        dest_path="../public/index.html"
+        dest_dir_path="../public"
     )
     print("\n✅ Static files copied successfully!")
     print("🎉 Site generation complete!")
