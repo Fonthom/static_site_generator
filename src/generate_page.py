@@ -20,10 +20,12 @@ def generate_page(from_path: str, template_path: str, dest_path: str):
 
     full_html = template.replace("{{ Title }}", title)
     full_html = full_html.replace("{{ Content }}", html_content)
-
+    if basepath != "/":
+        full_html = full_html.replace('href="/', f'href="{basepath}')
+        full_html = full_html.replace('src="/', f'src="{basepath}')
+    
     os.makedirs(os.path.dirname(dest_path), exist_ok=True)
-
     with open(dest_path, "w", encoding="utf-8") as f:
         f.write(full_html)
 
-    print(f" Page generated successfully at {dest_path}")
+    print(f"Page generated successfully at {dest_path}")
