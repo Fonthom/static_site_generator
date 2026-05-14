@@ -7,7 +7,7 @@ def copy_static(src_dir: str = "../static", dest_dir: str = "../public"):
     """Recursively copy static/ directory to public/"""
     root_dir = Path(__file__).parent.parent.absolute()
     source_path = root_dir / "static"
-    dest_path = root_dir / "public"
+    dest_path = root_dir / "docs"
 
     # Clean destination
     if dest_path.exists():
