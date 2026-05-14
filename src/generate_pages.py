@@ -29,4 +29,4 @@ def generate_pages_recursive(content_dir_path: str, template_path: str, dest_dir
                     dest_path=str(html_file_path)
                 )
 
-    print("\n✅ All pages generated successfully!")
+    print("\n All pages generated successfully!")

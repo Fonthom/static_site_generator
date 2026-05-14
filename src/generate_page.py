@@ -26,4 +26,4 @@ def generate_page(from_path: str, template_path: str, dest_path: str):
     with open(dest_path, "w", encoding="utf-8") as f:
         f.write(full_html)
 
-    print(f"✅ Page generated successfully at {dest_path}")
+    print(f" Page generated successfully at {dest_path}")
