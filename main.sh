@@ -1,1 +1,5 @@
-python3 src/main.py
+#!/bin/bash
+
+cd src
+python3 main.py
+cd ../public && python3 -m http.server 8888

@@ -1,7 +1,19 @@
-from textnode import TextNode, TextType
+from copy_static import copy_static
+from generate_page import generate_page
+
 
 def main():
-    node = TextNode("This is some anchor text", TextType.LINK, "https://www.boot.dev")
-    print(node)
+    print("🚀 Starting static site generation...\n")
+    
+    copy_static()
+    generate_page(
+        from_path="../content/index.md",
+        template_path="../template.html",
+        dest_path="../public/index.html"
+    )
+    print("\n✅ Static files copied successfully!")
+    print("🎉 Site generation complete!")
 
-main()
+
+if __name__ == "__main__":
+    main()
