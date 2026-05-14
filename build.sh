@@ -1,5 +1,6 @@
 #!/bin/bash
 
-python3 src/main.py "/static_site_generator/"
+BASEPATH=${GITHUB_PAGES_BASEPATH:-"/static_site_generator/"}
+python3 src/main.py "$BASEPATH"
 
 echo "Site built successfully into /docs folder!"

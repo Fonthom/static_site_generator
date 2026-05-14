@@ -3,8 +3,8 @@ import shutil
 from pathlib import Path
 
 
-def copy_static(src_dir: str = "../static", dest_dir: str = "../public"):
-    """Recursively copy static/ directory to public/"""
+def copy_static(src_dir: str = "../static", dest_dir: str = "../docs"):
+    """Recursively copy static/ directory to docs/"""
     root_dir = Path(__file__).parent.parent.absolute()
     source_path = root_dir / "static"
     dest_path = root_dir / "docs"
